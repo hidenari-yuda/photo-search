@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import './App.css';
 import ImageGallary from './components/ImageGallary';
+import ImageUploader from './components/ImageUploader';
 
 function App() {
   const [fetchData, setFetchData] = useState([]);
@@ -24,6 +25,9 @@ function App() {
 
   return (
     <div className="container">
+      <div className="App">
+    <ImageUploader />
+  </div>
       <h2>画像検索アプリ</h2>
       <form onSubmit={(e) => handleSubmit(e)}>
         <input type="text" placeholder="検索ワードを入力" ref={ref} />
